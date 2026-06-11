@@ -1,5 +1,3 @@
-FROM nvidia/cuda:12.1.1-runtime-ubuntu20.04
-
 WORKDIR /app
 
 # Install Python + curl
