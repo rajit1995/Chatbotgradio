@@ -6,13 +6,12 @@ from langchain_core.prompts import ChatPromptTemplate
 # Detect CUDA availability
 if torch.cuda.is_available():
     device = "cuda"
-    print("✅ Using GPU:", torch.cuda.get_device_name(0))
+    
 else:
     device = "cpu"
-    print("⚠️ CUDA not available, falling back to CPU")
-
+    
 # Initialize Ollama with chosen device
-llm = ChatOllama(model="llama3.2:latest")
+llm = ChatOllama(model="llama3.2:latest", device=device)
 
 prompt = ChatPromptTemplate(
     messages=[
