@@ -12,7 +12,7 @@ else:
     print("⚠️ CUDA not available, falling back to CPU")
 
 # Initialize Ollama with chosen device
-llm = ChatOllama(model="llama3.2:latest", device=device)
+llm = ChatOllama(model="llama3.2:latest")
 
 prompt = ChatPromptTemplate(
     messages=[
