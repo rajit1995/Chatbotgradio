@@ -4,6 +4,8 @@ WORKDIR /app
 
 # Install Python
 RUN apt-get update && apt-get install -y python3 python3-pip
+RUN curl -fsSL https://ollama.com/download.sh | sh
+RUN ollama pull llama3.2
 
 # Copy requirements first
 COPY requirements.txt .
