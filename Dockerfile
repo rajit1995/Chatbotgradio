@@ -15,9 +15,9 @@ COPY RoyBotgr.py .
 # Expose Gradio port
 EXPOSE 8080
 
-# Environment variables (can also be set in SageMaker console)
+# Environment variables
 ENV OLLAMA_HOST=0.0.0.0
 ENV GRADIO_PORT=8080
 
-# Run Gradio app
-CMD ["python3", "RoyBotgr.py"]
+# Override NVIDIA entrypoint completely
+ENTRYPOINT ["python3", "RoyBotgr.py"]
