@@ -9,4 +9,5 @@ sleep 5
 ollama pull llama3.2
 
 # Start your Gradio/LangChain app
-python app.p
+python RoyBotgr.py
+
